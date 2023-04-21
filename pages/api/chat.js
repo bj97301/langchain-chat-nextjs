@@ -1,6 +1,6 @@
 export default async function (req, res) {
 
-  const response = await fetch(process.env.LCC_ENDPOINT_URL, {
+  const response = await fetch(process.env.LCC_ENDPOINT_URL || "http://localhost:9000", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
